@@ -60,7 +60,7 @@ const eggs = [
         pets: [
           { name: "Green Hydra", baseOdds: 25000, icon: "images/pets/Green_Hydra.webp" },
           { name: "Demonic Hydra", baseOdds: 100000, icon: "images/pets/Demonic_Hydra.webp" },
-          { name: "The Overlord (Secret)", baseOdds: 1000000, icon: "images/pets/The_Overlord.webp" }
+          { name: "The Overlord (Secret)", baseOdds: 50000000, icon: "images/pets/The_Overlord.webp" }
         ]
       },
       {

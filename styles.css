@@ -1,0 +1,124 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2e003e;
+    margin: 0;
+    padding: 2rem;
+    color: #fff;
+    
+}
+h1 {
+    text-align: center;
+
+}
+p {
+    text-align: center;
+
+}
+
+#egg-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.egg-card {
+    background-color: #3c005d;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.egg-card:hover {
+    transform: scale(1.05);
+}
+
+.egg-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4a006b;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.egg-header h2 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.controls {
+    background-color: #4a006b;
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.controls label {
+    font-weight: bold;
+}
+
+.controls select,
+.controls input {
+    padding: 0.4rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    min-width: 80px;
+}
+
+.controls select:focus,
+.controls input:focus {
+    outline: 2px solid #fff;
+}
+
+table {
+    background-color: #5b0077;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    background-color: #450056;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #5e0081;
+}
+
+thead {
+    background-color: #450056;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #4f005e;
+}
+
+/* Styl pro Pet buňky: obrázek nahoře, text pod ním */
+td.pet-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 6px;
+    text-align: center;
+}
+
+td.pet-name img {
+    height: 32px;
+    width: 32px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+td.pet-name span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}

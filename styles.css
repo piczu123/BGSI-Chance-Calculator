@@ -122,3 +122,13 @@ td.pet-name span {
     text-overflow: ellipsis;
     max-width: 100px;
 }
+.contact-link {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
+  

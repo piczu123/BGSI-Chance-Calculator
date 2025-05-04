@@ -108,15 +108,16 @@ const eggs = [
     const controls = document.createElement("div");
     controls.className = "controls";
     controls.innerHTML = `
-      <label>Multiplier:</label>
-      <select class="multiplier">
-        <option value="5">5x</option>
-        <option value="10">10x</option>
-        <option value="25">25x</option>
-      </select>
-      <label>Luck Bonus (%):</label>
-      <input type="number" class="luck" value="0" />
-    `;
+  <label>Multiplier:</label>
+  <select class="multiplier">
+    <option value="1">1x (Base)</option>
+    <option value="5">5x</option>
+    <option value="10">10x</option>
+    <option value="25">25x</option>
+  </select>
+  <label>Luck Bonus (%):</label>
+  <input type="number" class="luck" value="0" />
+`;
   
     const table = document.createElement("table");
     table.innerHTML = `

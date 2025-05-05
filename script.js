@@ -93,8 +93,8 @@ const eggs = [
     image: "images/Game_Egg.webp",
     world: "Minigame Paradise",
     pets: [
-      { name: "Game Master", baseOdds: 2000, icon: "images/pets/Game_Master.webp" },
-      { name: "Jackpot", baseOdds: 20000, icon: "images/pets/Jackpot.webp" }
+      { name: "Game Master", baseOdds: 20000, icon: "images/pets/Game_Master.webp" },
+      { name: "Jackpot", baseOdds: 20000000, icon: "images/pets/Jackpot.webp" }
     ]
   },
   {

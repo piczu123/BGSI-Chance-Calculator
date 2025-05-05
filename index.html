@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
+    
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDR96LHZCK"></script>
 <script>
@@ -36,7 +36,15 @@
     </div>    
     <h1 class="main-title">BGSI Hatch Chance Calculator</h1>
     <p>This is BGSI legendary and secret pets luck calculator, if you find it useful, I will be glad for support ❤️</p>
-    <input type="text" id="search-bar" placeholder="Search eggs...">
+    <div class="search-world-container">
+  <input type="text" id="search-bar" placeholder="Search egg...">
+  <div class="world-buttons">
+    <button id="overworld-btn" class="world-btn" data-world="overworld">Overworld</button>
+    <button id="minigame-btn" class="world-btn" data-world="minigame">Minigame Paradise</button>
+    <button id="limited-btn" class="world-btn" data-world="limited">Limited</button>
+  </div>
+</div>
+
     <div id="egg-list"></div>
   </div>
   <script src="script.js"></script>

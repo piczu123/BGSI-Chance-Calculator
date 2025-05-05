@@ -2,6 +2,7 @@ const eggs = [
   {
     name: "Common Egg",
     image: "images/Common_Egg.webp",
+    world: "Overworld",
     pets: [
       { name: "King Doggy (Secret)", baseOdds: 100000000, icon: "images/pets/King_Doggy.webp" }
     ]
@@ -9,6 +10,7 @@ const eggs = [
   {
     name: "Spikey Egg",
     image: "images/Spikey_Egg.webp",
+    world: "Overworld",
     pets: [
       { name: "Emerald Golem", baseOdds: 200, icon: "images/pets/Emerald_Golem.webp" }
     ]
@@ -16,6 +18,7 @@ const eggs = [
   {
     name: "Magma Egg",
     image: "images/Magma_Egg.webp",
+    world: "Overworld",
     pets: [
       { name: "Inferno Dragon", baseOdds: 400, icon: "images/pets/Inferno_Dragon.webp" }
     ]
@@ -23,6 +26,7 @@ const eggs = [
   {
     name: "Crystal Egg",
     image: "images/Crystal_Egg.webp",
+    world: "Overworld",
     pets: [
       { name: "Unicorn", baseOdds: 400, icon: "images/pets/Unicorn.webp" },
       { name: "Flying Pig", baseOdds: 1000, icon: "images/pets/Flying_Pig.webp" }
@@ -31,6 +35,7 @@ const eggs = [
   {
     name: "Lunar Egg",
     image: "images/Lunar_Egg.webp",
+    world: "Overworld",
     pets: [
       { name: "Lunar Serpent", baseOdds: 400, icon: "images/pets/Lunar_Serpent.webp" },
       { name: "Electra", baseOdds: 1000, icon: "images/pets/Electra.webp" }
@@ -39,6 +44,7 @@ const eggs = [
   {
     name: "Void Egg",
     image: "images/Void_Egg.webp",
+    world: "Overworld",
     pets: [
       { name: "Dark Phoenix", baseOdds: 2000, icon: "images/pets/Dark_Phoenix.webp" },
       { name: "Neon Elemental", baseOdds: 5000, icon: "images/pets/Neon_Elemental.webp" },
@@ -48,6 +54,7 @@ const eggs = [
   {
     name: "Hell Egg",
     image: "images/Hell_Egg.webp",
+    world: "Overworld",
     pets: [
       { name: "Inferno Cube", baseOdds: 4000, icon: "images/pets/Inferno_Cube.webp" },
       { name: "Virus", baseOdds: 50000, icon: "images/pets/Virus.webp" }
@@ -56,6 +63,7 @@ const eggs = [
   {
     name: "Nightmare Egg",
     image: "images/Nightmare_Egg.webp",
+    world: "Overworld",
     pets: [
       { name: "Green Hydra", baseOdds: 25000, icon: "images/pets/Green_Hydra.webp" },
       { name: "Demonic Hydra", baseOdds: 100000, icon: "images/pets/Demonic_Hydra.webp" },
@@ -65,24 +73,45 @@ const eggs = [
   {
     name: "Rainbow Egg",
     image: "images/Rainbow_Egg.webp",
+    world: "Overworld",
     pets: [
       { name: "Hexarium", baseOdds: 100000, icon: "images/pets/Hexarium.webp" },
       { name: "Rainbow Shock", baseOdds: 200000, icon: "images/pets/Rainbow_Shock.webp" }
     ]
   },
   {
-    name: "100M Egg",
-    image: "images/100M_Egg.webp",
+    name: "Mining Egg",
+    image: "images/Mining_Egg.webp",
+    world: "Minigame Paradise",
     pets: [
-      { name: "Diamond Serpent", baseOdds: 2500, icon: "images/pets/Diamond_Serpent.webp" },
-      { name: "Diamond Hexarium", baseOdds: 50000, icon: "images/pets/Diamond_Hexarium.webp" },
-      { name: "King Pufferfish", baseOdds: 800000, icon: "images/pets/King_Pufferfish.webp" },
-      { name: "Royal Trophy (Secret)", baseOdds: 50000000, icon: "images/pets/Royal_Trophy.webp" }
+      { name: "Crystal Unicorn", baseOdds: 2000, icon: "images/pets/Crystal_Unicorn.webp" },
+      { name: "Stone Gargoyle", baseOdds: 20000, icon: "images/pets/Stone_Gargoyle.webp" }
+    ]
+  },
+  {
+    name: "Game Egg",
+    image: "images/Game_Egg.webp",
+    world: "Minigame Paradise",
+    pets: [
+      { name: "Game Master", baseOdds: 2000, icon: "images/pets/Game_Master.webp" },
+      { name: "Jackpot", baseOdds: 20000, icon: "images/pets/Jackpot.webp" }
+    ]
+  },
+  {
+    name: "Cyber Egg",
+    image: "images/Cyber_Egg.webp",
+    world: "Minigame Paradise",
+    pets: [
+      { name: "Cyborg Phoenix", baseOdds: 2500, icon: "images/pets/Cyborg_Phoenix.webp" },
+      { name: "Space Invader", baseOdds: 50000, icon: "images/pets/Space_Invader.webp" },
+      { name: "Bionic Shard", baseOdds: 666666, icon: "images/pets/Bionic_Shard.webp" },
+      { name: "Mech Robot (Secret)", baseOdds: 66666666, icon: "images/pets/Mech_Robot.webp" }
     ]
   },
   {
     name: "Silly Egg",
     image: "images/Silly_Egg.webp",
+    world: "Limited",
     pets: [
       { name: "DOOF", baseOdds: 10000, icon: "images/pets/DOOF.webp" },
       { name: "ROUND", baseOdds: 250000, icon: "images/pets/ROUND.webp" },
@@ -93,6 +122,37 @@ const eggs = [
 
 const eggList = document.getElementById("egg-list");
 const searchBar = document.getElementById("search-bar");
+
+// Initialize the current world
+let currentWorld = "Overworld"; // Default world
+
+// Add event listeners to the buttons for each world
+document.getElementById("overworld-btn").addEventListener("click", () => {
+  currentWorld = "Overworld";
+  renderEggs(); // Reload eggs for the Overworld world
+});
+
+document.getElementById("minigame-btn").addEventListener("click", () => {
+  currentWorld = "Minigame Paradise";
+  renderEggs(); // Reload eggs for the Minigame Paradise world
+});
+
+document.getElementById("limited-btn").addEventListener("click", () => {
+  currentWorld = "Limited";
+  renderEggs(); // Reload eggs for the Limited world
+});
+
+// Render eggs based on the current world
+function renderEggs() {
+  const eggList = document.getElementById("egg-list");
+  eggList.innerHTML = ""; // Clear existing eggs
+
+  // Filter the eggs based on the selected world
+  const filteredEggs = eggs.filter(egg => egg.world === currentWorld);
+
+  // Render the filtered eggs
+  filteredEggs.forEach(createEggCard);
+}
 
 function createEggCard(egg) {
   const card = document.createElement("div");
@@ -207,4 +267,15 @@ function createEggCard(egg) {
   updateChances(); // Initialize values
 }
 
-eggs.forEach(createEggCard);
+// Initialize with the default world (Overworld)
+renderEggs();
+searchBar.addEventListener("input", () => {
+  const query = searchBar.value.toLowerCase();
+  const cards = document.querySelectorAll(".egg-card");
+
+  cards.forEach(card => {
+    const name = card.dataset.eggName;
+    card.style.display = name.includes(query) ? "" : "none";
+  });
+});
+

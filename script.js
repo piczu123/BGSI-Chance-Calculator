@@ -214,7 +214,7 @@ function createEggCard(egg) {
   function updateChances() {
     const multiplier = parseFloat(multiplierSelect.value);
     const luckPercent = parseFloat(luckInput.value);
-    const luckMultiplier = 1 + luckPercent / 100;
+    const luckMultiplier = luckPercent > 0 ? luckPercent / 100 : 1;
 
     petList.innerHTML = "";
 

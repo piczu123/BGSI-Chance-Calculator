@@ -93,8 +93,8 @@ const eggs = [
     image: "images/Game_Egg.webp",
     world: "Minigame Paradise",
     pets: [
-      { name: "Game Master", baseOdds: 20000, icon: "images/pets/Game_Master.webp" },
-      { name: "Jackpot", baseOdds: 20000000, icon: "images/pets/Jackpot.webp" }
+      { name: "Game Master", baseOdds: 2000, icon: "images/pets/Game_Master.webp" },
+      { name: "Jackpot", baseOdds: 20000, icon: "images/pets/Jackpot.webp" }
     ]
   },
   {
@@ -214,13 +214,14 @@ function createEggCard(egg) {
   function updateChances() {
     const multiplier = parseFloat(multiplierSelect.value);
     const luckPercent = parseFloat(luckInput.value);
-    const luckMultiplier = luckPercent > 0 ? luckPercent / 100 : 1;
-
+    const luckMultiplier = 1 + luckPercent / 100; // Luck multiplier
+  
     petList.innerHTML = "";
-
+  
     egg.pets.forEach(pet => {
       let modifiedOdds = pet.baseOdds;
-
+  
+      // Modify odds based on the current mode (shiny, mythic, etc.)
       switch (currentMode) {
         case "shiny":
           modifiedOdds *= 40;
@@ -232,12 +233,14 @@ function createEggCard(egg) {
           modifiedOdds *= 4000;
           break;
       }
-
-      const baseChance = 1 / modifiedOdds;
-      const adjustedChance = baseChance * luckMultiplier * multiplier;
-      const adjustedOneIn = adjustedChance > 0 ? Math.round(1 / adjustedChance).toLocaleString() : "∞";
-      const adjustedPercent = (adjustedChance * 100).toFixed(6);
-
+  
+      // ✅ Apply combined logic for luck and egg multiplier
+      modifiedOdds = modifiedOdds / (luckMultiplier * multiplier);
+  
+      // Calculate the adjusted chances
+      const adjustedChance = 1 / modifiedOdds;
+      const adjustedPercent = (adjustedChance * 100).toFixed(5); // Display the result as percentage with 5 decimal places
+  
       const row = document.createElement("tr");
       row.innerHTML = `
         <td class="pet-name">
@@ -245,13 +248,13 @@ function createEggCard(egg) {
           <div>${pet.name}</div>
         </td>
         <td>1 in ${pet.baseOdds.toLocaleString()}</td>
-        <td>${adjustedOneIn}</td>
+        <td>${adjustedChance > 0 ? Math.round(1 / adjustedChance).toLocaleString() : "∞"}</td>
         <td>${adjustedPercent}%</td>
       `;
       petList.appendChild(row);
     });
   }
-
+  
   multiplierSelect.addEventListener("change", updateChances);
   luckInput.addEventListener("input", updateChances);
 
@@ -269,6 +272,7 @@ function createEggCard(egg) {
 
 // Initialize with the default world (Overworld)
 renderEggs();
+
 searchBar.addEventListener("input", () => {
   const query = searchBar.value.toLowerCase();
   const cards = document.querySelectorAll(".egg-card");
@@ -278,4 +282,3 @@ searchBar.addEventListener("input", () => {
     card.style.display = name.includes(query) ? "" : "none";
   });
 });
-

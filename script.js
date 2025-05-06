@@ -214,14 +214,16 @@ function createEggCard(egg) {
   function updateChances() {
     const multiplier = parseFloat(multiplierSelect.value);
     const luckPercent = parseFloat(luckInput.value);
-    const luckMultiplier = 1 + luckPercent / 100; // Luck multiplier
+  
+    const totalBoost = multiplier === 1
+      ? (100 + luckPercent) / 100
+      : (100 + luckPercent + (multiplier * 100)) / 100;
   
     petList.innerHTML = "";
   
     egg.pets.forEach(pet => {
       let modifiedOdds = pet.baseOdds;
   
-      // Modify odds based on the current mode (shiny, mythic, etc.)
       switch (currentMode) {
         case "shiny":
           modifiedOdds *= 40;
@@ -234,12 +236,10 @@ function createEggCard(egg) {
           break;
       }
   
-      // ✅ Apply combined logic for luck and egg multiplier
-      modifiedOdds = modifiedOdds / (luckMultiplier * multiplier);
-  
-      // Calculate the adjusted chances
-      const adjustedChance = 1 / modifiedOdds;
-      const adjustedPercent = (adjustedChance * 100).toFixed(5); // Display the result as percentage with 5 decimal places
+      const baseChance = 1 / modifiedOdds;
+      const adjustedChance = baseChance * totalBoost;
+      const adjustedPercent = (adjustedChance * 100).toFixed(5);
+      const adjustedOdds = adjustedChance > 0 ? Math.round(1 / adjustedChance).toLocaleString() : "∞";
   
       const row = document.createElement("tr");
       row.innerHTML = `
@@ -247,14 +247,15 @@ function createEggCard(egg) {
           <img src="${pet.icon}" alt="${pet.name}" />
           <div>${pet.name}</div>
         </td>
-        <td>1 in ${pet.baseOdds.toLocaleString()}</td>
-        <td>${adjustedChance > 0 ? Math.round(1 / adjustedChance).toLocaleString() : "∞"}</td>
+        <td>1 in ${Math.round(modifiedOdds).toLocaleString()}</td>
+        <td>1 in ${adjustedOdds}</td>
         <td>${adjustedPercent}%</td>
       `;
       petList.appendChild(row);
     });
   }
   
+
   multiplierSelect.addEventListener("change", updateChances);
   luckInput.addEventListener("input", updateChances);
 

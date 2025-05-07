@@ -213,7 +213,12 @@ function createEggCard(egg) {
 
   function updateChances() {
     const multiplier = parseFloat(multiplierSelect.value);
-    const luckPercent = parseFloat(luckInput.value);
+    let luckPercent = parseFloat(luckInput.value);
+  
+    // Apply -100% luck penalty for Game Egg
+    if (egg.name === "Game Egg") {
+      luckPercent = Math.max(0, luckPercent - 100);
+    }
   
     const totalBoost = multiplier === 1
       ? (100 + luckPercent) / 100
@@ -254,6 +259,7 @@ function createEggCard(egg) {
       petList.appendChild(row);
     });
   }
+  
   
 
   multiplierSelect.addEventListener("change", updateChances);

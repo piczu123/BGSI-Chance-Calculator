@@ -217,7 +217,9 @@ function createEggCard(egg) {
   
     // Apply -100% luck penalty for Game Egg
     if (egg.name === "Game Egg") {
-      luckPercent = Math.max(0, luckPercent - 100);
+      luckPercent = Math.max(0, luckPercent - 99); // -99% penalty
+    } else if (["Cyber Egg", "Mining Egg"].includes(egg.name)) {
+      luckPercent += 1; // +1% bonus
     }
   
     const totalBoost = multiplier === 1

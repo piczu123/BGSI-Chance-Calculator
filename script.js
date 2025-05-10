@@ -76,7 +76,8 @@ const eggs = [
     world: "Overworld",
     pets: [
       { name: "Hexarium", baseOdds: 100000, icon: "images/pets/Hexarium.webp" },
-      { name: "Rainbow Shock", baseOdds: 200000, icon: "images/pets/Rainbow_Shock.webp" }
+      { name: "Rainbow Shock", baseOdds: 200000, icon: "images/pets/Rainbow_Shock.webp" },
+      { name: "Queen Kitty (Secret)", baseOdds: 80000000, icon: "images/pets/Queen_Kitty.webp" }
     ]
   },
   {
@@ -109,6 +110,17 @@ const eggs = [
     ]
   },
   {
+    name: "Underworld Egg",
+    image: "images/Underworld.webp",
+    world: "Minigame Paradise",
+    pets: [
+      { name: "Crimson Butterfly", baseOdds: 2000, icon: "images/pets/Crimson_Butterfly.webp" },
+      { name: "Demonweb", baseOdds: 40000, icon: "images/pets/Demonweb.webp" },
+      { name: "Crimson Bloodmoon", baseOdds: 833333, icon: "images/pets/Crimson_Bloodmoon.webp" },
+      { name: "Lord Shock (Secret)", baseOdds: 500000000, icon: "images/pets/Lord_Shock.webp" }
+    ]
+  },
+  {
     name: "Silly Egg",
     image: "images/Silly_Egg.webp",
     world: "Limited",
@@ -117,6 +129,18 @@ const eggs = [
       { name: "ROUND", baseOdds: 250000, icon: "images/pets/ROUND.webp" },
       { name: "Silly Doggy (Secret)", baseOdds: 1000000, icon: "images/pets/Silly_Doggy.webp" }
     ]
+  },
+  {
+    name: "200M Egg",
+    image: "images/200M_Egg.webp",
+    world: "Limited",
+    pets: [
+    { name: "Prismatic", baseOdds: 2500, icon: "images/pets/Prismatic.webp" },
+      { name: "Darkess Creature", baseOdds: 50000, icon: "images/pets/Darkness_Creature.webp" },
+      { name: "Corrupt Glitch", baseOdds: 800000, icon: "images/pets/Corrupt_GLitch.webp" },
+      { name: "Wolflord (Secret)", baseOdds: 100000000, icon: "images/pets/Wolflord.webp" }
+    ]
+  
   }
 ];
 

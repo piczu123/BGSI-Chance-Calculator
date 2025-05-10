@@ -94,7 +94,7 @@ const eggs = [
     image: "images/Game_Egg.webp",
     world: "Minigame Paradise",
     pets: [
-      { name: "Game Master", baseOdds: 20000, icon: "images/pets/Game_Master.webp" },
+      { name: "Game Master", baseOdds: 100000, icon: "images/pets/Game_Master.webp" },
       { name: "Jackpot", baseOdds: 20000000, icon: "images/pets/Jackpot.webp" }
     ]
   },
@@ -239,11 +239,8 @@ function createEggCard(egg) {
     const multiplier = parseFloat(multiplierSelect.value);
     let luckPercent = parseFloat(luckInput.value);
   
-    // Apply -100% luck penalty for Game Egg
-    if (egg.name === "Game Egg") {
-      luckPercent = Math.max(0, luckPercent - 99); // -99% penalty
-    } else if (["Cyber Egg", "Mining Egg"].includes(egg.name)) {
-      luckPercent += 1; // +1% bonus
+  if (egg.name === "200M Egg") {
+      luckPercent = Math.max(0, luckPercent - 200); // -200% penalty
     }
   
     const totalBoost = multiplier === 1

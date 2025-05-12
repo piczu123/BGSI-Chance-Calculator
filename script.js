@@ -137,7 +137,7 @@ const eggs = [
     pets: [
     { name: "Prismatic", baseOdds: 2500, icon: "images/pets/Prismatic.webp" },
       { name: "Darkess Creature", baseOdds: 50000, icon: "images/pets/Darkness_Creature.webp" },
-      { name: "Corrupt Glitch", baseOdds: 800000, icon: "images/pets/Corrupt_GLitch.webp" },
+      { name: "Corrupt Glitch", baseOdds: 800000, icon: "images/pets/Corrupt_Glitch.webp" },
       { name: "Wolflord (Secret)", baseOdds: 100000000, icon: "images/pets/Wolflord.webp" }
     ]
   
@@ -239,9 +239,13 @@ function createEggCard(egg) {
     const multiplier = parseFloat(multiplierSelect.value);
     let luckPercent = parseFloat(luckInput.value);
   
-  if (egg.name === "200M Egg") {
-      luckPercent = Math.max(0, luckPercent - 200); // -200% penalty
+   if (egg.name === "200M Egg") {
+    if (luckPercent < 2000) {
+      luckPercent = Math.max(0, luckPercent - 100);
+    } else {
+      luckPercent = Math.max(0, luckPercent - 200);
     }
+  }
   
     const totalBoost = multiplier === 1
       ? (100 + luckPercent) / 100

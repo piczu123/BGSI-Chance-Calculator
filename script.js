@@ -111,7 +111,7 @@ const eggs = [
   },
   {
     name: "Underworld Egg",
-    image: "images/Underworld.webp",
+    image: "images/Underworld_Egg.webp",
     world: "Minigame Paradise",
     pets: [
       { name: "Crimson Butterfly", baseOdds: 2000, icon: "images/pets/Crimson_Butterfly.webp" },
@@ -119,16 +119,6 @@ const eggs = [
       { name: "Crimson Bloodmoon", baseOdds: 833333, icon: "images/pets/Crimson_Bloodmoon.webp" },
       { name: "Lord Shock (Secret)", baseOdds: 500000000, icon: "images/pets/Lord_Shock.webp" },
       { name: "D0GGY1337 (Secret)", baseOdds: 50000000, icon: "images/pets/D0GGY1337.webp" }
-    ]
-  },
-  {
-    name: "Silly Egg",
-    image: "images/Silly_Egg.webp",
-    world: "Limited",
-    pets: [
-      { name: "DOOF", baseOdds: 10000, icon: "images/pets/DOOF.webp" },
-      { name: "ROUND", baseOdds: 250000, icon: "images/pets/ROUND.webp" },
-      { name: "Silly Doggy (Secret)", baseOdds: 1000000, icon: "images/pets/Silly_Doggy.webp" }
     ]
   },
   {

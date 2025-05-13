@@ -76,8 +76,8 @@ const eggs = [
     world: "Overworld",
     pets: [
       { name: "Hexarium", baseOdds: 100000, icon: "images/pets/Hexarium.webp" },
-      { name: "Rainbow Shock", baseOdds: 200000, icon: "images/pets/Rainbow_Shock.webp" },
-      { name: "Queen Kitty (Secret)", baseOdds: 80000000, icon: "images/pets/Queen_Kitty.webp" }
+      { name: "Rainbow Shock", baseOdds: 200000, icon: "images/pets/Rainbow_Shock.webp" }
+      
     ]
   },
   {
@@ -117,7 +117,8 @@ const eggs = [
       { name: "Crimson Butterfly", baseOdds: 2000, icon: "images/pets/Crimson_Butterfly.webp" },
       { name: "Demonweb", baseOdds: 40000, icon: "images/pets/Demonweb.webp" },
       { name: "Crimson Bloodmoon", baseOdds: 833333, icon: "images/pets/Crimson_Bloodmoon.webp" },
-      { name: "Lord Shock (Secret)", baseOdds: 500000000, icon: "images/pets/Lord_Shock.webp" }
+      { name: "Lord Shock (Secret)", baseOdds: 500000000, icon: "images/pets/Lord_Shock.webp" },
+      { name: "D0GGY1337 (Secret)", baseOdds: 50000000, icon: "images/pets/D0GGY1337.webp" }
     ]
   },
   {

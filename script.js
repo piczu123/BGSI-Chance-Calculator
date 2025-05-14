@@ -76,8 +76,8 @@ const eggs = [
     world: "Overworld",
     pets: [
       { name: "Hexarium", baseOdds: 100000, icon: "images/pets/Hexarium.webp" },
-      { name: "Rainbow Shock", baseOdds: 200000, icon: "images/pets/Rainbow_Shock.webp" }
-      
+      { name: "Rainbow Shock", baseOdds: 200000, icon: "images/pets/Rainbow_Shock.webp" },
+      { name: "Queen Kitty (Secret)", baseOdds: 80000000, icon: "images/pets/Queen_Kitty.webp" }
     ]
   },
   {

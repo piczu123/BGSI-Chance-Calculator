@@ -48,7 +48,8 @@ const eggs = [
     pets: [
       { name: "Dark Phoenix", baseOdds: 2000, icon: "images/pets/Dark_Phoenix.webp" },
       { name: "Neon Elemental", baseOdds: 5000, icon: "images/pets/Neon_Elemental.webp" },
-      { name: "NULLVoid", baseOdds: 1000000, icon: "images/pets/NULLVoid.webp" }
+      { name: "NULLVoid", baseOdds: 1000000, icon: "images/pets/NULLVoid.webp" },
+      { name: "D0GGY1337 (Secret)", baseOdds: 50000000, icon: "images/pets/D0GGY1337.webp" }
     ]
   },
   {
@@ -88,7 +89,7 @@ const eggs = [
     pets: [
       { name: "Crystal Unicorn", baseOdds: 2000, icon: "images/pets/Crystal_Unicorn.webp" },
       { name: "Stone Gargoyle", baseOdds: 20000, icon: "images/pets/Stone_Gargoyle.webp" },
-      { name: "Prophet (Secret)", baseOdds: 250000000, icon: "images/pets/Prophet.webp" },
+      //{ name: "Prophet (Secret)", baseOdds: 250000000, icon: "images/pets/Prophet.webp" },
     ]
   },
   {

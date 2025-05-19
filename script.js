@@ -48,8 +48,7 @@ const eggs = [
     pets: [
       { name: "Dark Phoenix", baseOdds: 2000, icon: "images/pets/Dark_Phoenix.webp" },
       { name: "Neon Elemental", baseOdds: 5000, icon: "images/pets/Neon_Elemental.webp" },
-      { name: "NULLVoid", baseOdds: 1000000, icon: "images/pets/NULLVoid.webp" },
-      { name: "D0GGY1337 (Secret)", baseOdds: 50000000, icon: "images/pets/D0GGY1337.webp" }
+      { name: "NULLVoid", baseOdds: 1000000, icon: "images/pets/NULLVoid.webp" }
     ]
   },
   {
@@ -78,7 +77,6 @@ const eggs = [
     pets: [
       { name: "Hexarium", baseOdds: 100000, icon: "images/pets/Hexarium.webp" },
       { name: "Rainbow Shock", baseOdds: 200000, icon: "images/pets/Rainbow_Shock.webp" },
-      //{ name: "Queen Kitty (Secret)", baseOdds: 80000000, icon: "images/pets/Queen_Kitty.webp" }
       
     ]
   },
@@ -89,16 +87,16 @@ const eggs = [
     pets: [
       { name: "Crystal Unicorn", baseOdds: 2000, icon: "images/pets/Crystal_Unicorn.webp" },
       { name: "Stone Gargoyle", baseOdds: 20000, icon: "images/pets/Stone_Gargoyle.webp" },
-      //{ name: "Prophet (Secret)", baseOdds: 250000000, icon: "images/pets/Prophet.webp" },
+      { name: "Prophet (Secret)", baseOdds: 250000000, icon: "images/pets/Prophet.webp" },
     ]
   },
   {
-    name: "Game Egg",
-    image: "images/Game_Egg.webp",
-    world: "Minigame Paradise",
+    name: "Chance Egg",
+    image: "images/Chance_Egg.webp",
+    world: "Limited",
     pets: [
-      { name: "Game Master", baseOdds: 100000, icon: "images/pets/Game_Master.webp" },
-      { name: "Jackpot", baseOdds: 20000000, icon: "images/pets/Jackpot.webp" }
+      { name: "Ring Master", baseOdds: 100000, icon: "images/pets/Ring_Master.webp" },
+      { name: "Royal Guardian", baseOdds: 20000000, icon: "images/pets/Royal_Guardian.webp" }
     ]
   },
   {
@@ -113,29 +111,38 @@ const eggs = [
     ]
   },
   {
+    name: "Neon Egg",
+    image: "images/Neon_Egg.webp",
+    world: "Minigame Paradise",
+    pets: [
+      { name: "Neon Wyvern", baseOdds: 3333, icon: "images/pets/Neon_Wyvern.webp" },
+      { name: "Neon Wire Eye", baseOdds: 66666, icon: "images/pets/Neon_Wire_Eye.webp" },
+      { name: "Equalizer", baseOdds: 833333, icon: "images/pets/Equalizer.webp" },
+      { name: "Hyperwave Kitty (Secret)", baseOdds: 125000000, icon: "images/pets/Hyperwave_Kitty.webp" }
+    ]
+  },
+  {
     name: "Underworld Egg",
     image: "images/Underworld_Egg.webp",
-    world: "Minigame Paradise",
+    world: "Limited",
     pets: [
       { name: "Crimson Butterfly", baseOdds: 2000, icon: "images/pets/Crimson_Butterfly.webp" },
       { name: "Demonweb", baseOdds: 40000, icon: "images/pets/Demonweb.webp" },
       { name: "Crimson Bloodmoon", baseOdds: 833333, icon: "images/pets/Crimson_Bloodmoon.webp" },
       { name: "Lord Shock (Secret)", baseOdds: 500000000, icon: "images/pets/Lord_Shock.webp" },
-      //{ name: "D0GGY1337 (Secret)", baseOdds: 50000000, icon: "images/pets/D0GGY1337.webp" }
     ]
   },
   {
-    name: "200M Egg",
-    image: "images/200M_Egg.webp",
+    name: "Secret Bounty Egg",
+    image: "images/Infinity_Egg.webp",
     world: "Limited",
     pets: [
-    { name: "Prismatic", baseOdds: 2500, icon: "images/pets/Prismatic.webp" },
-      { name: "Darkess Creature", baseOdds: 50000, icon: "images/pets/Darkness_Creature.webp" },
-      { name: "Corrupt Glitch", baseOdds: 800000, icon: "images/pets/Corrupt_Glitch.webp" },
-      { name: "Wolflord (Secret)", baseOdds: 100000000, icon: "images/pets/Wolflord.webp" }
+      { name: "Queen Kitty (Secret)", baseOdds: 80000000, icon: "images/pets/Queen_Kitty.webp" },
+      { name: "D0GGY1337 (Secret)", baseOdds: 50000000, icon: "images/pets/D0GGY1337.webp" },
+      { name: "Prophet (Secret)", baseOdds: 250000000, icon: "images/pets/Prophet.webp" }
     ]
-  
   }
+
 ];
 
 const eggList = document.getElementById("egg-list");

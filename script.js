@@ -268,6 +268,8 @@ function createEggCard(egg) {
     } else {
       luckPercent = Math.max(0, luckPercent - 200);
     }
+  } else if (["Fruit Egg", "Icecream Egg"].includes(egg.name)) {
+    luckPercent = Math.max(0, luckPercent - 100);
   }
   
     const totalBoost = multiplier === 1
